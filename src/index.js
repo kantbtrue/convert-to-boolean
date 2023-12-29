@@ -12,6 +12,7 @@ function convertToBoolean(val) {
         switch (valType) {
             case "undefined":
             case "null":
+            case "NaN":
                 result = false;
                 break;
             case "object":
@@ -32,9 +33,11 @@ function convertToBoolean(val) {
             case "number":
             case "string":
                 if ("string" === valType) {
-                    val = parseInt(val);
+                    if (Object.is(parseInt(val), NaN) && 0 >= val.length) {
+                        result = true;
+                    }
                 }
-                if (0 === val || Object.is(val, NaN)) {
+                if (0 === parseInt(val) || !Object.is(parseInt(val), NaN)) {
                     result = false;
                 } else {
                     result = true;

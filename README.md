@@ -1,28 +1,32 @@
 # convertToBoolean
 
-Convert any value into a boolean value. The package come with `es` and a universal module defination(umd), that can be used in browser.
+It converts any value into a boolean value. The package includes `es` and universal module defination(umd), that can be used in browser.
 
 ## Install
 
 ```
-npm i --save convertToBoolean
+npm i convert-to-boolean
 ```
 
 ## Tested values
 
 ```
-convertToBoolean([]); //
-convertToBoolean({}); //
-convertToBoolean(''); //
-convertToBoolean(null); //
-convertToBoolean(undefined); //
-convertToBoolean('0'); //
-convertToBoolean(['a', 'b']); //
-convertToBoolean('string'); //
-convertToBoolean(2 / 0); //
-convertToBoolean(1); //
-convertToBoolean(0.1); //
+convertToBoolean([]); // false
+convertToBoolean({}); // false
+convertToBoolean(''); // false
+convertToBoolean(null); // false
+convertToBoolean(undefined); // false
+convertToBoolean('0'); // false
+convertToBoolean('1'); // true
+convertToBoolean(['a', 'b']); // true
+convertToBoolean('string'); // true
+convertToBoolean(2 / 0); // false
+convertToBoolean(0); // false
+convertToBoolean(1); // true
+convertToBoolean(0.0); // false
+convertToBoolean(0.1); // true
 ```
+
 
 ## License
 
