@@ -1,0 +1,72 @@
+{
+    "name": "convert-to-boolean",
+    "version": "1.0.0",
+    "description": "Convert any value into a boolean value.",
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/convert-to-boolean.umd.cjs",
+    "type": "module",
+    "module": "./dist/convert-to-boolean.js",
+    "exports": {
+        ".": {
+            "import": "./dist/convert-to-boolean.js",
+            "require": "./dist/convert-to-boolean.umd.cjs"
+        }
+    },
+    "keywords": [
+        "boolean",
+        "undefined",
+        "null",
+        "number",
+        "NaN",
+        "array",
+        "object",
+        "empty array",
+        "empty object",
+        "string",
+        "convert",
+        "conversion",
+        "type",
+        "parse",
+        "parser"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kantbtrue/convert-to-boolean.git"
+    },
+    "scripts": {
+        "prebuild": "rimraf dist",
+        "build": "vite build",
+        "lint": "eslint src",
+        "validate": "npm-run-all --parallel lint test",
+        "test": "cross-env NODE_ENV=test c8 mocha"
+    },
+    "author": "Shashikant Yadav <shashikant1989yadav@gmail.com> (https://shashikant.dev/)",
+    "license": "MIT",
+    "devDependencies": {
+        "c8": "^8.0.1",
+        "chai": "^4.3.10",
+        "cross-env": "^7.0.3",
+        "eslint": "^8.56.0",
+        "eslint-config-prettier": "^9.1.0",
+        "mocha": "^10.2.0",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^3.1.1",
+        "rimraf": "^5.0.5",
+        "vite": "^5.0.10"
+    },
+    "c8": {
+        "all": true,
+        "check-coverage": true,
+        "instrument": false,
+        "sourceMap": false,
+        "reporter": [
+            "text",
+            "lcov"
+        ],
+        "include": [
+            "src"
+        ]
+    }
+}

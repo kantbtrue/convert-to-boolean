@@ -1,0 +1,13 @@
+/* eslint-disable no-undef */
+import { resolve } from "path";
+import { defineConfig } from "vite";
+
+export default defineConfig({
+    build: {
+        lib: {
+            entry: resolve(__dirname, "src/index.js"),
+            name: "convertToBoolean",
+            fileName: "convert-to-boolean"
+        }
+    },
+});
