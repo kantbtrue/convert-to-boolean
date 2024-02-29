@@ -33,8 +33,14 @@ function convertToBoolean(val) {
             case "number":
             case "string":
                 if ("string" === valType) {
-                    if (Object.is(parseInt(val), NaN) && 0 >= val.length) {
-                        result = true;
+                    if (Object.is(parseInt(val), NaN)) {
+                        return true;
+                    } else {
+                        if (parseInt(val) === 0) {
+                            return false;
+                        } else {
+                            return true;
+                        }
                     }
                 }
                 if (0 === parseInt(val) || !Object.is(parseInt(val), NaN)) {
