@@ -35,4 +35,18 @@ describe("Helper Funcitons", () => {
             });
         });
     });
+    describe("Check numeric string and number values", () => {
+        it("Should return `true` for numeric string value 1", () => {
+            expect(convertToBoolean("1")).to.equal(true);
+        });
+        it("Should return `false` for numeric string value 0", () => {
+            expect(convertToBoolean("0")).to.equal(false);
+        });
+        it("Should return `true` for numeric value 1", () => {
+            expect(convertToBoolean(1)).to.equal(true);
+        });
+        it("Should return `false` for numeric value 0", () => {
+            expect(convertToBoolean(0)).to.equal(false);
+        });
+    });
 });

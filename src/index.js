@@ -43,7 +43,7 @@ function convertToBoolean(val) {
                         }
                     }
                 }
-                if (0 === parseInt(val) || !Object.is(parseInt(val), NaN)) {
+                if (0 === parseInt(val)) {
                     result = false;
                 } else {
                     result = true;
