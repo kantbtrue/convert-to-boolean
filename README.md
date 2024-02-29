@@ -8,6 +8,12 @@ It converts any value into a boolean value. The package includes `es` and univer
 npm i convert-to-boolean
 ```
 
+## Add
+
+```
+import convertToBoolean from 'convert-to-boolean';
+```
+
 ## Tested values
 
 ```
@@ -26,7 +32,6 @@ convertToBoolean(1); // true
 convertToBoolean(0.0); // false
 convertToBoolean(0.1); // true
 ```
-
 
 ## License
 

@@ -1,11 +1,11 @@
 {
     "name": "convert-to-boolean",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Convert any value into a boolean value.",
     "files": [
         "dist"
     ],
-    "main": "./dist/convert-to-boolean.umd.cjs",
+    "main": "./dist/convert-to-boolean.js",
     "type": "module",
     "module": "./dist/convert-to-boolean.js",
     "exports": {
