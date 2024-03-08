@@ -1,6 +1,6 @@
 {
     "name": "convert-to-boolean",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Convert any value into a boolean value.",
     "files": [
         "dist"
